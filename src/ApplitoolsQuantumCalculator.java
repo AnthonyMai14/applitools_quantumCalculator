@@ -3,7 +3,7 @@ package src;
 class ApplitoolsQuantumCalculator {
     
     protected static final int SIZE = 20;
-    protected static final int NUM_OF_CALCULATORS = 1;
+    protected static final int NUM_OF_CALCULATORS = 2;
 
 
     static class QuantumCalculator implements Runnable {
