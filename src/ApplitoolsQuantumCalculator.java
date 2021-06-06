@@ -70,6 +70,7 @@ class ApplitoolsQuantumCalculator {
                 System.out.print(this.randNum[i][0] + " + " + this.randNum[i][1] + " = " + errorSolution[i] + " ");
                 System.out.println(interpretQuantumSuccess(i)); 
             }
+            System.out.println();
         }
 
         public Double calculateSuccessRate() {
@@ -169,7 +170,6 @@ class ApplitoolsQuantumCalculator {
         //print solutions
         thread1.printSolutions();
         thread2.printSolutions();
-        System.out.println();
         //print success rate
         thread1.printSuccessRate();
         thread2.printSuccessRate();
