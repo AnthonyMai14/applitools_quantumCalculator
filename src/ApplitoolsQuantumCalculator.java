@@ -124,14 +124,17 @@ class ApplitoolsQuantumCalculator {
             //begin search
             for (int i = 0; i < NUM_OF_CALCULATORS; ++i)  {
                 if (i == 0) { 
-                    bestCalculator[i] = listOfCalculators[i]; 
+                    bestCalculator[0] = listOfCalculators[0]; 
                     ++numOfBestCalculator;
+                    continue;
                 }
-                else if (bestCalculator[numOfBestCalculator - 1].successRate == listOfCalculators[i].calculateSuccessRate()) {
+                Double bestVal = bestCalculator[0].successRate;
+                Double checkVal = listOfCalculators[i].calculateSuccessRate();
+                if (bestVal.equals(checkVal)) {
                     bestCalculator[numOfBestCalculator] = listOfCalculators[i];
                     ++numOfBestCalculator;
                 }
-                else if (bestCalculator[numOfBestCalculator - 1].successRate < listOfCalculators[i].calculateSuccessRate()) {
+                else if (bestCalculator[0].successRate < listOfCalculators[i].calculateSuccessRate()) {
                     numOfBestCalculator = 1;
                     bestCalculator[0] = listOfCalculators[i];
                 }
